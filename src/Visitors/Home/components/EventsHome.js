@@ -9,7 +9,7 @@ export default class EventsHome extends Component {
             dots: true,
             // infinite: true,
             // speed: 500,
-            slidesPerRow: 1,
+            slidesPerRow: 2,
             // slidesToScroll: 1
         };
         return (
@@ -23,7 +23,8 @@ export default class EventsHome extends Component {
                         <div className="isi__carousel_right">
                             <Link to="#" onClick={this.carousel}><i className="fas fa-caret-right"></i></Link>
                         </div>
-                        <Slider {...settings} className="isi__carousel_item">
+                        <Slider {...settings} >
+                        <div className="isi__carousel_item">
                             <div className="isi__caro">
                                 <div className="isi__almanac">
                                     <div className="isi__day">LUNES</div>
@@ -74,6 +75,7 @@ export default class EventsHome extends Component {
                                         <Link to="/">MÁS SOBRE EL EVENTO</Link>
                                     </div>
                                 </div>
+                            </div>
                             </div>
                         </Slider>
                     </div>
