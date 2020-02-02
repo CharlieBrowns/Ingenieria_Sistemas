@@ -507,7 +507,7 @@
     .pyts__left .pyts__filtros {
         width: 100%;
         padding: 20px;
-        display: flex;
+        /* display: flex; */
         flex-wrap: wrap;
         align-items: center;
     }

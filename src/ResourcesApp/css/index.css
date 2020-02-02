@@ -137,12 +137,14 @@
   
   /*----------------------Proyectos--------------------------------*/
   .isi__proyectosBody {
-      display: flex;
+      display: flex !important;
       flex-wrap: wrap;
       position: relative;
+
+      justify-content: center;
   }
   .isi__proyectosBody .isi__proyectos  {
-      width: 50%;
+      width: 45%;
   }
   .isi__proyectosBody .isi__proyectos h1 {
       letter-spacing: 3px;
@@ -225,10 +227,10 @@
   
   }
   .isi__proyectosBody .isi__proyecto_img {
-      width: 50%;
+      width: 45%;
   }
   .isi__proyectosBody .isi__proyecto_img img {
-      width: 70%;
+      width: 100%;
   }
   .isi__proyectosBody .isi__indicadores {
       position: absolute;

@@ -1,20 +1,29 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
+import Slider from 'infinite-react-carousel'
 
 export default class EventsHome extends Component {
+
     render() {
+        const settings = {
+            dots: true,
+            // infinite: true,
+            // speed: 500,
+            slidesPerRow: 1,
+            // slidesToScroll: 1
+        };
         return (
             <section className="isi__contenedor">
                 <div className="isi__eventos">
                     <h1>Nuestros Eventos</h1>
                     <div className="isi__carousel">
                         <div className="isi__carousel_left">
-                            <Link to="/"><i className="fas fa-caret-left"></i></Link>
+                            <Link to="#" onClick={this.carousel}><i className="fas fa-caret-left"></i></Link>
                         </div>
                         <div className="isi__carousel_right">
-                            <Link to="/"><i className="fas fa-caret-right"></i></Link>
+                            <Link to="#" onClick={this.carousel}><i className="fas fa-caret-right"></i></Link>
                         </div>
-                        <div className="isi__carousel_item">
+                        <Slider {...settings} className="isi__carousel_item">
                             <div className="isi__caro">
                                 <div className="isi__almanac">
                                     <div className="isi__day">LUNES</div>
@@ -66,10 +75,12 @@ export default class EventsHome extends Component {
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </Slider>
                     </div>
                 </div>
             </section>
+
+
         )
     }
 }
