@@ -1,0 +1,75 @@
+import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
+
+export default class EventsHome extends Component {
+    render() {
+        return (
+            <section className="isi__contenedor">
+                <div className="isi__eventos">
+                    <h1>Nuestros Eventos</h1>
+                    <div className="isi__carousel">
+                        <div className="isi__carousel_left">
+                            <Link to="/"><i className="fas fa-caret-left"></i></Link>
+                        </div>
+                        <div className="isi__carousel_right">
+                            <Link to="/"><i className="fas fa-caret-right"></i></Link>
+                        </div>
+                        <div className="isi__carousel_item">
+                            <div className="isi__caro">
+                                <div className="isi__almanac">
+                                    <div className="isi__day">LUNES</div>
+                                    <div className="isi__date">26</div>
+                                    <div className="isi__month">AGOSTO</div>
+                                </div>
+                                <div className="isi__content">
+                                    <div className="isi__title">Bienvenida de Cachimbos 2019-II</div>
+                                    <ul className="isi__description">
+                                        <li><span><i className="fas fa-paper-plane"></i></span>Presenial</li>
+                                        <li><span><i className="fas fa-eye"></i></span>10:30 a.m. - 05:00 p.m.</li>
+                                    </ul>
+                                    <div className="isi__link">
+                                        <Link to="/">MÁS SOBRE EL EVENTO</Link>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="isi__caro">
+                                <div className="isi__almanac">
+                                    <div className="isi__day">LUNES</div>
+                                    <div className="isi__date">26</div>
+                                    <div className="isi__month">AGOSTO</div>
+                                </div>
+                                <div className="isi__content">
+                                    <div className="isi__title">Bienvenida de Cachimbos 2019-II</div>
+                                    <ul className="isi__description">
+                                        <li><span><i className="fas fa-paper-plane"></i></span>Presenial</li>
+                                        <li><span><i className="fas fa-eye"></i></span>10:30 a.m. - 05:00 p.m.</li>
+                                    </ul>
+                                    <div className="isi__link">
+                                        <Link to="/">MÁS SOBRE EL EVENTO</Link>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="isi__caro">
+                                <div className="isi__almanac">
+                                    <div className="isi__day">LUNES</div>
+                                    <div className="isi__date">26</div>
+                                    <div className="isi__month">AGOSTO</div>
+                                </div>
+                                <div className="isi__content">
+                                    <div className="isi__title">Bienvenida de Cachimbos 2019-II</div>
+                                    <ul className="isi__description">
+                                        <li><span><i className="fas fa-paper-plane"></i></span>Presenial</li>
+                                        <li><span><i className="fas fa-eye"></i></span>10:30 a.m. - 05:00 p.m.</li>
+                                    </ul>
+                                    <div className="isi__link">
+                                        <Link to="/">MÁS SOBRE EL EVENTO</Link>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        )
+    }
+}
