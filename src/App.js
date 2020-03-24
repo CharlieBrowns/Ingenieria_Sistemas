@@ -12,7 +12,6 @@ const Visitors = lazy(() => import('./Visitors/Visitors')),
 function App() {
   return (
     <Provider store={store}>
-      dasdsa
       <Router>
         <Suspense fallback={<div>Loading...</div>}>
           <Switch>
