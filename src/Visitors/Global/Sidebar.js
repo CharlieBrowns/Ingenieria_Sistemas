@@ -7,12 +7,6 @@ import '../../ResourcesApp/js/functions'
 
 // export default ({onLinkClick = () => {}}) => (
 export default class Sidebar extends Component {
-    constructor(props) {
-        super(props)
-
-        console.log("los props", this.props.onLinkClick)
-
-    }
 
     activeStyle = (tabClickEvent) => {
         let myTabs = document.querySelectorAll("ul.isi__menu > li");

@@ -1,7 +1,14 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
+import { getCurrentNews } from '../../../redux/actions/newsActions'
+import { connect } from 'react-redux'
 
-export default class NewsHome extends Component {
+class NewsHome extends Component {
+
+    componentDidMount() {
+        this.props.getCurrentNews()
+    }
+
     render() {
         return (
             <section className="isi__contenedor">
@@ -65,3 +72,18 @@ export default class NewsHome extends Component {
         )
     }
 }
+
+
+const mapStateToProps = (state) => {
+    return {
+        News : state.News
+    }
+}
+
+const mapDisactchToProps = (dispatch) => {
+    return {
+        getCurrentNews: () => dispatch(getCurrentNews())
+    }
+}
+
+export default connect(mapStateToProps, mapDisactchToProps)(NewsHome)

@@ -1,20 +1,30 @@
 import React, { Component } from 'react'
 import Slider from 'infinite-react-carousel'
 import { Link } from 'react-router-dom'
+import { connect } from 'react-redux';
+import { getCurrentProjects } from '../../../redux/actions/projectsActions'
 
-export default class ProjectsHome extends Component {
+class ProjectsHome extends Component {
+
+    componentDidMount() {
+        this.props.getCurrentProjects()
+    }
+
     render() {
+        // console.log("ESTO FALTA ARREGLAR // PROBLAEMA COM EL")
+
+        const { Projects } = this.props
         const settings = {
             dots: true,
-            // infinite: true,
-            // speed: 500,
             slidesPerRow: 1,
-            // slidesToScroll: 1
-          };
+        };
+
         return (
 
 
             <Slider {...settings} className="isi__contenedor">
+                {console.log("estoy esperando esto : ", Projects.projects)}
+
                 <div className="isi__proyectosBody">
                     <div className="isi__proyectos">
                         <h1>Nuestros Proyectos</h1>
@@ -37,11 +47,22 @@ export default class ProjectsHome extends Component {
                         <img src="http://localhost:4000/archives/roboticArm.jpg" alt="" height="500px" />
                     </div>
                 </div>
-                <div>
-                    <h3>5</h3>
-                </div>
             </Slider>
 
         )
     }
 }
+
+const mapStateToProps = (state) => {
+    return {
+        Projects: state.Projects
+    }
+}
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+        getCurrentProjects: () => dispatch(getCurrentProjects())
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(ProjectsHome)

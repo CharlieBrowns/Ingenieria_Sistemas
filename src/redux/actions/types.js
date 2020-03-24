@@ -1,0 +1,16 @@
+
+        // PROJECTS ACTIONS
+const CURRENT_PROJECT = 'CURRENT_PROJECT',
+
+        // EVENTS ACTIONS
+      CURRENT_EVENTS = 'CURRENT_EVENTS',  
+
+        // NEWS ACTIONS
+      CURRENT_NEWS = 'CURRENT_NEWS'
+
+
+export default  {
+    CURRENT_PROJECT,
+    CURRENT_EVENTS,
+    CURRENT_NEWS
+}

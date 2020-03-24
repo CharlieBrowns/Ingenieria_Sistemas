@@ -318,12 +318,29 @@
       width: 90%;
       margin: auto;
   } 
+
+  .isi__carousel_item > div {
+      width: 100%;
+  }
+
   .isi__eventos .isi__carousel_item .isi__caro {
       flex-grow: 1;
       display: flex;
       height: 100px;
       padding: 0px 10px;
   }
+
+
+/* .carousel-item{
+    height: 100%;
+}
+
+.carousel-row {
+    display: flex;
+    height: 100%;
+    align-items: center;
+} */
+
   .isi__eventos .isi__carousel_item .isi__caro .isi__almanac {
       width: 35%;
       border: 1px solid var(--color_morado);
@@ -654,6 +671,10 @@
       .isi__contenedor {
           width: 90%;
       }
+
+      .isi__almanac {
+          display: flex !important ;
+      } 
       
       .isi__eventos .isi__carousel_left, .isi__eventos .isi__carousel_right {
           width: 3%;
@@ -672,6 +693,7 @@
       .isi__laboratorios .isi__pane h2, .isi__laboratorios .isi__pane h4, .isi__laboratorios .isi__pane p, .isi__laboratorios .isi__pane .isi__link {
           margin-bottom: 10px;
       }
+
   }
   @media only screen and (max-width: 768px) {
       .isi__contenedor {
